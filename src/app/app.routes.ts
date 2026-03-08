@@ -26,5 +26,17 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./features/users/user-form/user-form.component').then(m => m.UserFormComponent),
   },
+  {
+    path: 'audit',
+    canActivate: [authGuard],
+    loadComponent: () =>
+      import('./features/audit/audit-log.component').then(m => m.AuditLogComponent),
+  },
+  {
+    path: 'settings',
+    canActivate: [authGuard],
+    loadComponent: () =>
+      import('./features/settings/settings.component').then(m => m.SettingsComponent),
+  },
   { path: '**', redirectTo: '/login' },
 ];
