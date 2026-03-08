@@ -20,7 +20,7 @@ import { RelativeTimePipe } from '../../../shared/pipes/relative-time.pipe';
   standalone: true,
   imports: [FormsModule, StatusBadgeComponent, RelativeTimePipe],
   template: `
-    <div class="space-y-4">
+    <div class="space-y-4 p-6">
       <!-- Toolbar -->
       <div class="flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
         <div class="flex flex-col sm:flex-row gap-2 flex-1">
