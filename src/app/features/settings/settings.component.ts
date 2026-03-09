@@ -64,7 +64,7 @@ import { AuthService } from '../../core/services/auth.service';
           <div class="flex items-center justify-between py-3 border-b border-slate-700/50">
             <div>
               <p class="text-slate-200 text-sm font-medium">Multi-Factor Authentication</p>
-              <p class="text-slate-500 text-xs mt-0.5">Require MFA for all admin accounts</p>
+              <p class="text-slate-400 text-xs mt-0.5">Require MFA for all admin accounts</p>
             </div>
             <button
               role="switch" [attr.aria-checked]="mfaEnabled()" (click)="mfaEnabled.set(!mfaEnabled())"
@@ -77,7 +77,7 @@ import { AuthService } from '../../core/services/auth.service';
           <div class="flex items-center justify-between py-3 border-b border-slate-700/50">
             <div>
               <p class="text-slate-200 text-sm font-medium">Session Timeout</p>
-              <p class="text-slate-500 text-xs mt-0.5">Automatically log out inactive users</p>
+              <p class="text-slate-400 text-xs mt-0.5">Automatically log out inactive users</p>
             </div>
             <select [(ngModel)]="sessionTimeout" class="px-3 py-1.5 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-200 text-sm focus:outline-none focus:border-teal-400">
               <option value="15">15 minutes</option>
@@ -89,7 +89,7 @@ import { AuthService } from '../../core/services/auth.service';
           <div class="flex items-center justify-between py-3 border-b border-slate-700/50">
             <div>
               <p class="text-slate-200 text-sm font-medium">Audit Log Retention</p>
-              <p class="text-slate-500 text-xs mt-0.5">How long to keep audit records</p>
+              <p class="text-slate-400 text-xs mt-0.5">How long to keep audit records</p>
             </div>
             <select [(ngModel)]="logRetention" class="px-3 py-1.5 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-200 text-sm focus:outline-none focus:border-teal-400">
               <option value="30">30 days</option>
@@ -101,7 +101,7 @@ import { AuthService } from '../../core/services/auth.service';
           <div class="flex items-center justify-between py-3">
             <div>
               <p class="text-slate-200 text-sm font-medium">IP Allowlisting</p>
-              <p class="text-slate-500 text-xs mt-0.5">Restrict access to specific IP ranges</p>
+              <p class="text-slate-400 text-xs mt-0.5">Restrict access to specific IP ranges</p>
             </div>
             <button
               role="switch" [attr.aria-checked]="ipAllowlist()" (click)="ipAllowlist.set(!ipAllowlist())"
@@ -125,7 +125,7 @@ import { AuthService } from '../../core/services/auth.service';
             <div class="flex items-center justify-between py-2 border-b border-slate-700/30 last:border-0">
               <div>
                 <p class="text-slate-200 text-sm">{{ item.label }}</p>
-                <p class="text-slate-500 text-xs">{{ item.desc }}</p>
+                <p class="text-slate-400 text-xs">{{ item.desc }}</p>
               </div>
               <button
                 role="switch" [attr.aria-checked]="notifState()[item.key]" (click)="toggleNotif(item.key)"
@@ -154,7 +154,7 @@ import { AuthService } from '../../core/services/auth.service';
             <label class="block text-slate-400 text-xs font-medium mb-1.5 uppercase tracking-wider" for="api-key">API Key</label>
             <div class="relative">
               <input id="api-key" [type]="showKey() ? 'text' : 'password'" value="your-api-key-goes-here-replace-in-production" class="w-full px-3 py-2 pr-10 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-300 text-sm font-mono focus:outline-none focus:border-teal-400" readonly />
-              <button (click)="showKey.set(!showKey())" class="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300" [attr.aria-label]="showKey() ? 'Hide API key' : 'Show API key'">
+              <button (click)="showKey.set(!showKey())" class="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-300" [attr.aria-label]="showKey() ? 'Hide API key' : 'Show API key'">
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   @if (showKey()) {
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 4.411m0 0L21 21"/>

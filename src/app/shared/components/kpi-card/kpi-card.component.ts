@@ -8,7 +8,9 @@ import { Component, Input } from '@angular/core';
       <div class="flex items-center justify-between">
         <p class="text-slate-400 text-sm font-medium">{{ title }}</p>
         <div [class]="'w-10 h-10 rounded-lg flex items-center justify-center ' + colorClass">
-          <span class="text-lg">{{ icon }}</span>
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" [attr.d]="icon"/>
+          </svg>
         </div>
       </div>
 
@@ -35,7 +37,7 @@ import { Component, Input } from '@angular/core';
                 {{ trend }}
               </span>
             }
-            <span class="text-slate-500 text-xs">{{ trendLabel }}</span>
+            <span class="text-slate-400 text-xs">{{ trendLabel }}</span>
           </div>
         </div>
       }

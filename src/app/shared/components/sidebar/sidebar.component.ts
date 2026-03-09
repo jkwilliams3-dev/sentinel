@@ -45,7 +45,7 @@ const NAV_ITEMS: NavItem[] = [
         </div>
         <div>
           <p class="text-slate-100 font-bold text-sm">Sentinel</p>
-          <p class="text-slate-500 text-xs">Management Platform</p>
+          <p class="text-slate-400 text-xs">Management Platform</p>
         </div>
       </div>
 
@@ -82,7 +82,7 @@ const NAV_ITEMS: NavItem[] = [
             </div>
             <div class="flex-1 min-w-0">
               <p class="text-slate-200 text-sm font-medium truncate">{{ currentUser()!.name }}</p>
-              <p class="text-slate-500 text-xs truncate">{{ currentUser()!.role }}</p>
+              <p class="text-slate-400 text-xs truncate">{{ currentUser()!.role }}</p>
             </div>
           </div>
         }

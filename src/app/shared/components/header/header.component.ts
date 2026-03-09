@@ -90,7 +90,7 @@ interface AppNotification {
                     ></span>
                     <div>
                       <p class="text-sm font-medium" [class.text-slate-100]="n.unread" [class.text-slate-400]="!n.unread">{{ n.title }}</p>
-                      <p class="text-slate-500 text-xs mt-0.5">{{ n.body }}</p>
+                      <p class="text-slate-400 text-xs mt-0.5">{{ n.body }}</p>
                       <p class="text-slate-600 text-xs mt-1">{{ n.time }}</p>
                     </div>
                   </div>
@@ -115,7 +115,7 @@ interface AppNotification {
               <div class="w-8 h-8 bg-teal-500 rounded-full flex items-center justify-center text-xs font-bold text-white">
                 {{ currentUser()!.avatar }}
               </div>
-              <svg class="w-3.5 h-3.5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg class="w-3.5 h-3.5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
               </svg>
             </button>
@@ -128,7 +128,7 @@ interface AppNotification {
               >
                 <div class="px-4 py-3 border-b border-slate-800">
                   <p class="text-slate-200 text-sm font-semibold">{{ currentUser()!.name }}</p>
-                  <p class="text-slate-500 text-xs">{{ currentUser()!.email }}</p>
+                  <p class="text-slate-400 text-xs">{{ currentUser()!.email }}</p>
                 </div>
                 <button (click)="goTo('/settings')" class="w-full flex items-center gap-2 px-4 py-2.5 text-slate-300 hover:bg-slate-800 transition-colors text-sm text-left" role="menuitem" type="button">
                   <span>👤</span>Profile Settings

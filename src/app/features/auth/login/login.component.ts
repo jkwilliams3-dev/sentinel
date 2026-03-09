@@ -131,7 +131,7 @@ import { AuthService } from '../../../core/services/auth.service';
 
           <!-- Demo credentials -->
           <div class="mt-6 pt-6 border-t border-slate-700">
-            <p class="text-slate-500 text-xs font-medium mb-3 uppercase tracking-wide">Demo Credentials</p>
+            <p class="text-slate-400 text-xs font-medium mb-3 uppercase tracking-wide">Demo Credentials</p>
             <div class="space-y-2">
               @for (cred of demoCreds; track cred.email) {
                 <button
