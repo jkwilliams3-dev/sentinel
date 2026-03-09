@@ -12,7 +12,7 @@ import { AuthService } from '../../../core/services/auth.service';
       <div class="w-full max-w-md">
         <!-- Branding -->
         <div class="text-center mb-8">
-          <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-2xl mb-4 shadow-lg shadow-blue-500/30">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-teal-500 rounded-2xl mb-4 shadow-lg shadow-blue-500/30">
             <svg class="w-9 h-9 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
             </svg>
@@ -47,7 +47,7 @@ import { AuthService } from '../../../core/services/auth.service';
                 formControlName="email"
                 autocomplete="email"
                 placeholder="you@forge.dev"
-                [class]="emailError ? 'border-red-500 focus:ring-red-500' : 'border-slate-600 focus:ring-blue-500'"
+                [class]="emailError ? 'border-red-500 focus:ring-red-500' : 'border-slate-600 focus:ring-teal-400'"
                 class="w-full px-3 py-2.5 bg-slate-900 border rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:border-transparent transition"
                 aria-label="Email address"
                 [attr.aria-invalid]="emailError ? 'true' : 'false'"
@@ -70,7 +70,7 @@ import { AuthService } from '../../../core/services/auth.service';
                   formControlName="password"
                   autocomplete="current-password"
                   placeholder="Enter your password"
-                  [class]="passwordError ? 'border-red-500 focus:ring-red-500' : 'border-slate-600 focus:ring-blue-500'"
+                  [class]="passwordError ? 'border-red-500 focus:ring-red-500' : 'border-slate-600 focus:ring-teal-400'"
                   class="w-full px-3 py-2.5 bg-slate-900 border rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:border-transparent transition pr-10"
                   aria-label="Password"
                   [attr.aria-invalid]="passwordError ? 'true' : 'false'"
@@ -105,7 +105,7 @@ import { AuthService } from '../../../core/services/auth.service';
                 id="remember"
                 type="checkbox"
                 formControlName="remember"
-                class="w-4 h-4 bg-slate-900 border-slate-600 rounded text-blue-600 focus:ring-blue-500 focus:ring-offset-slate-800"
+                class="w-4 h-4 bg-slate-900 border-slate-600 rounded text-blue-600 focus:ring-teal-400 focus:ring-offset-slate-800"
               />
               <label for="remember" class="ml-2 text-sm text-slate-400">Remember me</label>
             </div>
@@ -114,7 +114,7 @@ import { AuthService } from '../../../core/services/auth.service';
             <button
               type="submit"
               [disabled]="loading()"
-              class="w-full py-3 px-4 bg-blue-600 hover:bg-blue-500 disabled:bg-blue-800 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-800 flex items-center justify-center gap-2"
+              class="w-full py-3 px-4 bg-teal-500 hover:bg-teal-400 disabled:bg-blue-800 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-slate-800 flex items-center justify-center gap-2"
               aria-label="Sign in to Sentinel"
             >
               @if (loading()) {
@@ -167,7 +167,7 @@ export class LoginComponent {
   });
 
   demoCreds = [
-    { email: 'admin@forge.dev', password: 'Admin123!', role: 'Admin', badgeClass: 'bg-blue-900/50 text-blue-400 border border-blue-700/50' },
+    { email: 'admin@forge.dev', password: 'Admin123!', role: 'Admin', badgeClass: 'bg-blue-900/50 text-teal-400 border border-teal-700/50' },
     { email: 'manager@forge.dev', password: 'Manager123!', role: 'Manager', badgeClass: 'bg-emerald-900/50 text-emerald-400 border border-emerald-700/50' },
     { email: 'viewer@forge.dev', password: 'Viewer123!', role: 'Viewer', badgeClass: 'bg-slate-700/50 text-slate-400 border border-slate-600/50' },
   ];

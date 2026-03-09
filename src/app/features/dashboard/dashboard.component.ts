@@ -34,7 +34,7 @@ import { RelativeTimePipe } from '../../shared/pipes/relative-time.pipe';
           trend="+12%"
           trendLabel="from last month"
           icon="👥"
-          colorClass="bg-blue-500/20"
+          colorClass="bg-teal-400/20"
           [trendPositive]="true"
         ></app-kpi-card>
         <app-kpi-card
@@ -72,7 +72,7 @@ import { RelativeTimePipe } from '../../shared/pipes/relative-time.pipe';
         <div class="lg:col-span-2 bg-slate-800 border border-slate-700 rounded-xl">
           <div class="flex items-center justify-between px-6 py-4 border-b border-slate-700">
             <h3 class="text-slate-100 font-semibold">Recent Activity</h3>
-            <a routerLink="/audit" class="text-blue-400 hover:text-blue-300 text-sm transition-colors">View all</a>
+            <a routerLink="/audit" class="text-teal-400 hover:text-blue-300 text-sm transition-colors">View all</a>
           </div>
           <div class="divide-y divide-slate-700/50">
             @for (entry of recentActivity(); track entry.id) {
@@ -103,7 +103,7 @@ import { RelativeTimePipe } from '../../shared/pipes/relative-time.pipe';
           <div class="p-4 space-y-2">
             <a
               routerLink="/users"
-              class="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-600/10 hover:bg-blue-600/20 border border-blue-600/20 text-blue-400 hover:text-blue-300 transition-colors"
+              class="flex items-center gap-3 px-4 py-3 rounded-lg bg-teal-500/10 hover:bg-teal-500/20 border border-blue-600/20 text-teal-400 hover:text-blue-300 transition-colors"
             >
               <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/>
@@ -156,7 +156,7 @@ export class DashboardComponent implements OnInit {
 
   actionBadgeClass(action: string): string {
     switch (action) {
-      case 'LOGIN': case 'LOGOUT': return 'bg-blue-900/50 text-blue-400 border border-blue-700/50';
+      case 'LOGIN': case 'LOGOUT': return 'bg-blue-900/50 text-teal-400 border border-teal-700/50';
       case 'CREATE': return 'bg-emerald-900/50 text-emerald-400 border border-emerald-700/50';
       case 'UPDATE': return 'bg-amber-900/50 text-amber-400 border border-amber-700/50';
       case 'DELETE': return 'bg-red-900/50 text-red-400 border border-red-700/50';

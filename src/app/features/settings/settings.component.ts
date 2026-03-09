@@ -25,17 +25,17 @@ import { AuthService } from '../../core/services/auth.service';
       <!-- Org Settings -->
       <section class="bg-slate-800 border border-slate-700 rounded-xl p-6 space-y-5" aria-labelledby="org-heading">
         <h2 id="org-heading" class="text-base font-semibold text-slate-100 flex items-center gap-2">
-          <svg class="w-5 h-5 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          <svg class="w-5 h-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
           Organization
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label class="block text-slate-300 text-sm font-medium mb-1.5" for="org-name">Organization Name</label>
-            <input id="org-name" type="text" [(ngModel)]="orgName" class="w-full px-3 py-2 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-200 text-sm focus:outline-none focus:border-blue-500" />
+            <input id="org-name" type="text" [(ngModel)]="orgName" class="w-full px-3 py-2 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-200 text-sm focus:outline-none focus:border-teal-400" />
           </div>
           <div>
             <label class="block text-slate-300 text-sm font-medium mb-1.5" for="org-timezone">Timezone</label>
-            <select id="org-timezone" [(ngModel)]="timezone" class="w-full px-3 py-2 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-200 text-sm focus:outline-none focus:border-blue-500">
+            <select id="org-timezone" [(ngModel)]="timezone" class="w-full px-3 py-2 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-200 text-sm focus:outline-none focus:border-teal-400">
               <option value="America/Chicago">Central Time (CT)</option>
               <option value="America/New_York">Eastern Time (ET)</option>
               <option value="America/Los_Angeles">Pacific Time (PT)</option>
@@ -45,11 +45,11 @@ import { AuthService } from '../../core/services/auth.service';
           </div>
           <div>
             <label class="block text-slate-300 text-sm font-medium mb-1.5" for="org-email">Support Email</label>
-            <input id="org-email" type="email" [(ngModel)]="supportEmail" class="w-full px-3 py-2 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-200 text-sm focus:outline-none focus:border-blue-500" />
+            <input id="org-email" type="email" [(ngModel)]="supportEmail" class="w-full px-3 py-2 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-200 text-sm focus:outline-none focus:border-teal-400" />
           </div>
           <div>
             <label class="block text-slate-300 text-sm font-medium mb-1.5" for="org-domain">Domain</label>
-            <input id="org-domain" type="text" [(ngModel)]="domain" class="w-full px-3 py-2 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-200 text-sm focus:outline-none focus:border-blue-500" placeholder="app.yourcompany.com" />
+            <input id="org-domain" type="text" [(ngModel)]="domain" class="w-full px-3 py-2 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-200 text-sm focus:outline-none focus:border-teal-400" placeholder="app.yourcompany.com" />
           </div>
         </div>
       </section>
@@ -68,8 +68,8 @@ import { AuthService } from '../../core/services/auth.service';
             </div>
             <button
               role="switch" [attr.aria-checked]="mfaEnabled()" (click)="mfaEnabled.set(!mfaEnabled())"
-              class="relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-800"
-              [class]="mfaEnabled() ? 'bg-blue-600' : 'bg-slate-600'"
+              class="relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-slate-800"
+              [class]="mfaEnabled() ? 'bg-teal-500' : 'bg-slate-600'"
             >
               <span class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform" [class]="mfaEnabled() ? 'translate-x-6' : 'translate-x-1'"></span>
             </button>
@@ -79,7 +79,7 @@ import { AuthService } from '../../core/services/auth.service';
               <p class="text-slate-200 text-sm font-medium">Session Timeout</p>
               <p class="text-slate-500 text-xs mt-0.5">Automatically log out inactive users</p>
             </div>
-            <select [(ngModel)]="sessionTimeout" class="px-3 py-1.5 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-200 text-sm focus:outline-none focus:border-blue-500">
+            <select [(ngModel)]="sessionTimeout" class="px-3 py-1.5 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-200 text-sm focus:outline-none focus:border-teal-400">
               <option value="15">15 minutes</option>
               <option value="30">30 minutes</option>
               <option value="60">1 hour</option>
@@ -91,7 +91,7 @@ import { AuthService } from '../../core/services/auth.service';
               <p class="text-slate-200 text-sm font-medium">Audit Log Retention</p>
               <p class="text-slate-500 text-xs mt-0.5">How long to keep audit records</p>
             </div>
-            <select [(ngModel)]="logRetention" class="px-3 py-1.5 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-200 text-sm focus:outline-none focus:border-blue-500">
+            <select [(ngModel)]="logRetention" class="px-3 py-1.5 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-200 text-sm focus:outline-none focus:border-teal-400">
               <option value="30">30 days</option>
               <option value="90">90 days</option>
               <option value="180">180 days</option>
@@ -105,8 +105,8 @@ import { AuthService } from '../../core/services/auth.service';
             </div>
             <button
               role="switch" [attr.aria-checked]="ipAllowlist()" (click)="ipAllowlist.set(!ipAllowlist())"
-              class="relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-800"
-              [class]="ipAllowlist() ? 'bg-blue-600' : 'bg-slate-600'"
+              class="relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 focus:ring-offset-slate-800"
+              [class]="ipAllowlist() ? 'bg-teal-500' : 'bg-slate-600'"
             >
               <span class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform" [class]="ipAllowlist() ? 'translate-x-6' : 'translate-x-1'"></span>
             </button>
@@ -130,7 +130,7 @@ import { AuthService } from '../../core/services/auth.service';
               <button
                 role="switch" [attr.aria-checked]="notifState()[item.key]" (click)="toggleNotif(item.key)"
                 class="relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none"
-                [class]="notifState()[item.key] ? 'bg-blue-600' : 'bg-slate-600'"
+                [class]="notifState()[item.key] ? 'bg-teal-500' : 'bg-slate-600'"
               >
                 <span class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform" [class]="notifState()[item.key] ? 'translate-x-6' : 'translate-x-1'"></span>
               </button>
@@ -148,12 +148,12 @@ import { AuthService } from '../../core/services/auth.service';
         <div class="space-y-3">
           <div>
             <label class="block text-slate-400 text-xs font-medium mb-1.5 uppercase tracking-wider" for="webhook-url">Webhook URL</label>
-            <input id="webhook-url" type="url" value="https://hooks.yourcompany.com/events" class="w-full px-3 py-2 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-300 text-sm font-mono focus:outline-none focus:border-blue-500" />
+            <input id="webhook-url" type="url" value="https://hooks.yourcompany.com/events" class="w-full px-3 py-2 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-300 text-sm font-mono focus:outline-none focus:border-teal-400" />
           </div>
           <div>
             <label class="block text-slate-400 text-xs font-medium mb-1.5 uppercase tracking-wider" for="api-key">API Key</label>
             <div class="relative">
-              <input id="api-key" [type]="showKey() ? 'text' : 'password'" value="your-api-key-goes-here-replace-in-production" class="w-full px-3 py-2 pr-10 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-300 text-sm font-mono focus:outline-none focus:border-blue-500" readonly />
+              <input id="api-key" [type]="showKey() ? 'text' : 'password'" value="your-api-key-goes-here-replace-in-production" class="w-full px-3 py-2 pr-10 bg-slate-900/50 border border-slate-600 rounded-lg text-slate-300 text-sm font-mono focus:outline-none focus:border-teal-400" readonly />
               <button (click)="showKey.set(!showKey())" class="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-500 hover:text-slate-300" [attr.aria-label]="showKey() ? 'Hide API key' : 'Show API key'">
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   @if (showKey()) {
@@ -173,7 +173,7 @@ import { AuthService } from '../../core/services/auth.service';
         <button class="px-4 py-2 text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-sm transition-colors">
           Cancel
         </button>
-        <button (click)="save()" class="px-6 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-sm font-medium transition-colors">
+        <button (click)="save()" class="px-6 py-2 bg-teal-500 hover:bg-teal-400 text-white rounded-lg text-sm font-medium transition-colors">
           Save Changes
         </button>
       </div>

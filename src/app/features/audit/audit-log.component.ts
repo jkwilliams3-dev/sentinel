@@ -41,13 +41,13 @@ function initials(name: string): string {
             type="text"
             placeholder="Search by user or action..."
             (input)="onSearch($event)"
-            class="w-full pl-9 pr-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-slate-200 placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500"
+            class="w-full pl-9 pr-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-slate-200 placeholder-slate-500 text-sm focus:outline-none focus:border-teal-400"
             aria-label="Search audit log"
           />
         </div>
         <select
           (change)="onTypeFilter($event)"
-          class="px-3 py-2 bg-slate-800 border border-slate-700 rounded-lg text-slate-300 text-sm focus:outline-none focus:border-blue-500"
+          class="px-3 py-2 bg-slate-800 border border-slate-700 rounded-lg text-slate-300 text-sm focus:outline-none focus:border-teal-400"
           aria-label="Filter by action type"
         >
           <option value="">All Actions</option>
@@ -67,7 +67,7 @@ function initials(name: string): string {
           <div class="text-slate-400 text-xs mt-1">Total Events</div>
         </div>
         <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center">
-          <div class="text-2xl font-bold text-blue-400">{{ todayCount() }}</div>
+          <div class="text-2xl font-bold text-teal-400">{{ todayCount() }}</div>
           <div class="text-slate-400 text-xs mt-1">Today</div>
         </div>
         <div class="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center">
@@ -83,7 +83,7 @@ function initials(name: string): string {
       <!-- Loading -->
       @if (loading()) {
         <div class="flex items-center justify-center py-16">
-          <div class="animate-spin w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full"></div>
+          <div class="animate-spin w-8 h-8 border-2 border-teal-400 border-t-transparent rounded-full"></div>
         </div>
       }
 
@@ -109,7 +109,7 @@ function initials(name: string): string {
                     </td>
                     <td class="px-4 py-3">
                       <div class="flex items-center gap-2">
-                        <div class="w-7 h-7 rounded-full bg-blue-600/20 border border-blue-500/50 flex items-center justify-center text-blue-400 text-xs font-semibold flex-shrink-0">
+                        <div class="w-7 h-7 rounded-full bg-teal-500/20 border border-teal-400/50 flex items-center justify-center text-teal-400 text-xs font-semibold flex-shrink-0">
                           {{ getInitials(entry.userName) }}
                         </div>
                         <span class="text-slate-200 text-xs">{{ entry.userName }}</span>
@@ -175,7 +175,7 @@ export class AuditLogComponent implements OnInit {
     const map: Record<string, string> = {
       LOGIN: 'bg-emerald-900/50 text-emerald-400 border-emerald-700/50',
       LOGOUT: 'bg-slate-700 text-slate-400 border-slate-600',
-      CREATE: 'bg-blue-900/50 text-blue-400 border-blue-700/50',
+      CREATE: 'bg-blue-900/50 text-teal-400 border-teal-700/50',
       UPDATE: 'bg-amber-900/50 text-amber-400 border-amber-700/50',
       DELETE: 'bg-red-900/50 text-red-400 border-red-700/50',
       SETTINGS_CHANGE: 'bg-purple-900/50 text-purple-400 border-purple-700/50',

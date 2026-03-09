@@ -38,7 +38,7 @@ const NAV_ITEMS: NavItem[] = [
     >
       <!-- Logo -->
       <div class="flex items-center gap-3 px-6 py-5 border-b border-slate-700">
-        <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+        <div class="w-8 h-8 bg-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">
           <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
           </svg>
@@ -57,7 +57,7 @@ const NAV_ITEMS: NavItem[] = [
               <li>
                 <a
                   [routerLink]="item.route"
-                  routerLinkActive="bg-blue-600/20 text-blue-400 border-blue-500/50"
+                  routerLinkActive="bg-teal-500/20 text-teal-400 border-teal-400/50"
                   [routerLinkActiveOptions]="{ exact: false }"
                   class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800 transition-colors border border-transparent group"
                   (click)="closeMobile()"
@@ -77,7 +77,7 @@ const NAV_ITEMS: NavItem[] = [
       <div class="px-3 py-4 border-t border-slate-700">
         @if (currentUser()) {
           <div class="flex items-center gap-3 px-3 py-2 mb-2 rounded-lg bg-slate-800/50">
-            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-white">
+            <div class="w-8 h-8 bg-teal-500 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-white">
               {{ currentUser()!.avatar }}
             </div>
             <div class="flex-1 min-w-0">

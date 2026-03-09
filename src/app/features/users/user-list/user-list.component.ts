@@ -34,7 +34,7 @@ import { RelativeTimePipe } from '../../../shared/pipes/relative-time.pipe';
               [(ngModel)]="searchQuery"
               (ngModelChange)="onSearchChange($event)"
               placeholder="Search users..."
-              class="pl-9 pr-3 py-2 bg-slate-800 border border-slate-700 rounded-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full sm:w-64 text-sm"
+              class="pl-9 pr-3 py-2 bg-slate-800 border border-slate-700 rounded-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-teal-400 w-full sm:w-64 text-sm"
               aria-label="Search users"
             />
           </div>
@@ -43,7 +43,7 @@ import { RelativeTimePipe } from '../../../shared/pipes/relative-time.pipe';
           <select
             [(ngModel)]="roleFilter"
             (ngModelChange)="onFilterChange()"
-            class="px-3 py-2 bg-slate-800 border border-slate-700 rounded-lg text-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+            class="px-3 py-2 bg-slate-800 border border-slate-700 rounded-lg text-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-400 text-sm"
             aria-label="Filter by role"
           >
             <option value="All">All Roles</option>
@@ -56,7 +56,7 @@ import { RelativeTimePipe } from '../../../shared/pipes/relative-time.pipe';
           <select
             [(ngModel)]="statusFilter"
             (ngModelChange)="onFilterChange()"
-            class="px-3 py-2 bg-slate-800 border border-slate-700 rounded-lg text-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+            class="px-3 py-2 bg-slate-800 border border-slate-700 rounded-lg text-slate-300 focus:outline-none focus:ring-2 focus:ring-teal-400 text-sm"
             aria-label="Filter by status"
           >
             <option value="All">All Statuses</option>
@@ -83,7 +83,7 @@ import { RelativeTimePipe } from '../../../shared/pipes/relative-time.pipe';
           @if (canEdit()) {
             <button
               (click)="createUser.emit()"
-              class="flex items-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-sm font-medium transition-colors"
+              class="flex items-center gap-2 px-3 py-2 bg-teal-500 hover:bg-teal-400 text-white rounded-lg text-sm font-medium transition-colors"
               aria-label="Create new user"
             >
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -97,12 +97,12 @@ import { RelativeTimePipe } from '../../../shared/pipes/relative-time.pipe';
 
       <!-- Bulk Actions Bar -->
       @if (selectedIds().length > 0) {
-        <div class="flex items-center gap-3 px-4 py-3 bg-blue-900/30 border border-blue-700/50 rounded-lg" role="alert" aria-live="polite">
+        <div class="flex items-center gap-3 px-4 py-3 bg-teal-900/30 border border-teal-700/50 rounded-lg" role="alert" aria-live="polite">
           <span class="text-blue-300 text-sm font-medium">{{ selectedIds().length }} selected</span>
           <div class="flex items-center gap-2 ml-auto">
             <select
               [(ngModel)]="bulkRole"
-              class="px-2 py-1.5 bg-slate-800 border border-slate-700 rounded text-slate-300 text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+              class="px-2 py-1.5 bg-slate-800 border border-slate-700 rounded text-slate-300 text-sm focus:outline-none focus:ring-1 focus:ring-teal-400"
               aria-label="Select role for bulk update"
             >
               <option value="">Change Role...</option>
@@ -113,7 +113,7 @@ import { RelativeTimePipe } from '../../../shared/pipes/relative-time.pipe';
             <button
               (click)="onBulkRole()"
               [disabled]="!bulkRole"
-              class="px-3 py-1.5 bg-blue-600 hover:bg-blue-500 disabled:opacity-40 text-white text-sm rounded transition-colors"
+              class="px-3 py-1.5 bg-teal-500 hover:bg-teal-400 disabled:opacity-40 text-white text-sm rounded transition-colors"
               aria-label="Apply role change to selected users"
             >Apply Role</button>
             <button
@@ -141,7 +141,7 @@ import { RelativeTimePipe } from '../../../shared/pipes/relative-time.pipe';
                   type="checkbox"
                   [checked]="allSelected()"
                   (change)="toggleAll($event)"
-                  class="w-4 h-4 bg-slate-900 border-slate-600 rounded text-blue-600 focus:ring-blue-500"
+                  class="w-4 h-4 bg-slate-900 border-slate-600 rounded text-blue-600 focus:ring-teal-400"
                   aria-label="Select all users"
                 />
               </th>
@@ -199,7 +199,7 @@ import { RelativeTimePipe } from '../../../shared/pipes/relative-time.pipe';
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
                     </svg>
                     <p class="text-sm">No users found matching your criteria.</p>
-                    <button (click)="clearFilters()" class="text-blue-400 hover:text-blue-300 text-sm underline">Clear filters</button>
+                    <button (click)="clearFilters()" class="text-teal-400 hover:text-blue-300 text-sm underline">Clear filters</button>
                   </div>
                 </td>
               </tr>
@@ -214,7 +214,7 @@ import { RelativeTimePipe } from '../../../shared/pipes/relative-time.pipe';
                       type="checkbox"
                       [checked]="isSelected(user.id)"
                       (change)="toggleSelect(user.id)"
-                      class="w-4 h-4 bg-slate-900 border-slate-600 rounded text-blue-600 focus:ring-blue-500"
+                      class="w-4 h-4 bg-slate-900 border-slate-600 rounded text-blue-600 focus:ring-teal-400"
                       [attr.aria-label]="'Select user ' + user.name"
                     />
                   </td>
@@ -242,7 +242,7 @@ import { RelativeTimePipe } from '../../../shared/pipes/relative-time.pipe';
                       @if (canEdit()) {
                         <button
                           (click)="editUser.emit(user)"
-                          class="p-1.5 text-slate-400 hover:text-blue-400 hover:bg-blue-900/30 rounded transition-colors"
+                          class="p-1.5 text-slate-400 hover:text-teal-400 hover:bg-teal-900/30 rounded transition-colors"
                           [attr.aria-label]="'Edit user ' + user.name"
                         >
                           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
